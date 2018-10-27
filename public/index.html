@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset200802.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_881673_mvz3mz5rps.css">
     <title>mobile-market</title>
+    <style>
+    html,body {
+      height: 100%;
+      width: 100%;
+    }
+    </style>
   </head>
   <body>
     <noscript>
@@ -13,5 +21,16 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      //得到手机屏幕的宽度
+      let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      //得到html的Dom元素
+      let htmlDom = document.getElementsByTagName('html')[0];
+      //设置根元素字体大小
+      htmlDom.style.fontSize= htmlWidth/20 + 'px';
+      if (htmlWidth > 750){
+        htmlWidth = 750
+      }
+    </script>
   </body>
 </html>
